@@ -27,7 +27,7 @@ before_script:
   - mkdir glfw/build
   - cd glfw/build
   - cmake .. -DBUILD_SHARED_LIBS=ON
-  - make VERBOSE=1
+  - make VERBOSE=1 -j8
   - sudo make install
   - cd ../..
   - mkdir build
@@ -35,7 +35,7 @@ before_script:
   
 script:
   - cmake ..
-  - make VERBOSE=1
+  - make VERBOSE=1 -j8
   - sudo make install
 
 os:
